@@ -1,7 +1,7 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import Box from './Box.jsx'
-import { Stats } from '@react-three/drei'
+import { OrbitControls, Stats } from '@react-three/drei'
 
 const App = () => {
   return (
@@ -9,6 +9,9 @@ const App = () => {
       <Box position={[-0.75, 0, 0]} name="A" />
       <Box position={[0.75, 0, 0]} name="B" />
       <Stats />
+      <OrbitControls />
+      <axesHelper args={[3]} />
+      <gridHelper args={[20, 20]} />
     </Canvas>
   )
 }
